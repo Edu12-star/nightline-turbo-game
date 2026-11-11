@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Russo One', sans-serif;
+    --font-ui: 'Chakra Petch', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0b0e17;
+    font-family: var(--font-ui);
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.touch-canvas {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 18px rgba(0, 240, 255, 0.35), inset 0 0 10px rgba(0, 240, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.65), inset 0 0 16px rgba(0, 240, 255, 0.25);
+  }
+}
+
+.neon-cta {
+  animation: pulse-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes combo-pop {
+  0% {
+    transform: scale(1.28);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.combo-pop {
+  animation: combo-pop 0.18s ease-out;
+}
