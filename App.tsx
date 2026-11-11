@@ -10,9 +10,9 @@ import {
   VolumeX,
   Zap,
 } from 'lucide-react';
-import { HighScoreTable } from './components/HighScoreTable';
-import { soundEngine } from './game/audio';
-import { RaceEngine } from './game/engine';
+import { HighScoreTable } from './HighScoreTable';
+import { soundEngine } from './audio';
+import { RaceEngine } from './engine';
 import {
   getBestScore,
   isQualifyingHighScore,
@@ -22,8 +22,8 @@ import {
   saveDriverName,
   saveHighScore,
   saveMuted,
-} from './game/storage';
-import { GameStatus, HighScoreEntry, HudSnapshot } from './game/types';
+} from './storage';
+import { GameStatus, HighScoreEntry, HudSnapshot } from './types';
 
 const INITIAL_HUD: HudSnapshot = {
   score: 0,
